@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Inventory</h1>
+
+<a class="btn btn-primary" href="/" role="button">Back Home</a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Qty.</th>
+      <th>Sale Price</th>
+      <th>Supplier</th>
+      <th>Cost</th>
+      <th>Margin</th>
+      <th>Last Update</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for product in products %}
+    <tr>
+      <td>{{ product.name }}</td>
+      <td>{{ product.quantity }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.supplier }}</td>
+      <td>{{ product.purchase_price }}</td>
+      <td>{{ product.margin }}</td>
+      <td>{{ product.last_modification }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

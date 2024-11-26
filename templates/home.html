@@ -1,0 +1,54 @@
+{% extends 'base.html'%} {% block content %}
+
+<div class="home-styles">
+  <div class="header-container">
+    <h1 class="home-tittle">InventoryMate</h1>
+    <img src="../static/images/django.png" alt="" />
+  </div>
+  <div class="main-section">
+    <div class="home-button-container">
+      <div class="button_container">
+        <a href="/products/" class="button-view">View Inventory</a>
+      </div>
+      <div class="button_container">
+        <a href="/products/add_product" class="button-add">Add Product</a>
+      </div>
+      <div class="button_container">
+        <a href="/products/modify_product" class="button-edit">Edit Records</a>
+      </div>
+    </div>
+    <div class="instructions">
+      <h3>
+        <strong>Welcome to InventoryMate!</strong> Use the buttons to manage
+        your inventory
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <strong>View Inventory</strong> - Click here to see a complete list
+            of all items in stock.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Add Product</strong> - Use this button to add new products,
+            including their details, to the inventory.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Edit Records</strong> - Select this option to modify
+            existing product details or update stock levels.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mini-footer">
+    <p>
+      Test Application Developed by Gabriel Guerra © 2024. All rights reserved.
+    </p>
+  </div>
+</div>
+
+{% endblock %}

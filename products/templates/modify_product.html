@@ -1,0 +1,28 @@
+{% extends "base.html" %} 
+{% block content %}
+<h2>Modify Product</h2>
+
+<form novalidate action="{% url 'products:modify_product' %}" method="post">
+  {% csrf_token %}
+  <label for="product_name">Select Product:</label>
+  <select class="form-select" name="product_name" id="product_name" onchange="this.form.submit()">
+    <option value="">Select a product</option>
+    {% for product in products %}
+      <option value="{{ product.name }}" {% if selected_product and selected_product.name == product.name %}selected{% endif %}>{{ product.name }}</option>
+    {% endfor %}
+  </select>
+</form>
+
+
+{% if form %}
+<form novalidate action="{% url 'products:modify_product' %}"  method="post">
+  {% csrf_token %}
+  <input type="hidden" name="product_name" value="{{ selected_product.name }}">
+  {{ form }}
+  <button type="submit" name="save_changes">Save Changes</button>
+  <a href="{% url 'products:index' %}"><button type="button">Cancel</button></a>
+  <button type="submit" name="delete_item">Delete Item</button>
+</form>
+{% endif %}
+
+{% endblock %}
