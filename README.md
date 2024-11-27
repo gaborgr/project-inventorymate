@@ -8,8 +8,8 @@
 ## 📋 Features
 - Product Management: Add, edit, and delete products.
 - Data Insights:
- - Profit margin calculation (sale price vs. last purchase cost).
- - Timestamp of the latest modification.
+    + Profit margin calculation (sale price vs. last purchase cost).
+    + Timestamp of the latest modification.
 - User-Friendly Interface: A custom HTML interface designed for simplicity, without relying solely on Django's admin panel.
 - Dynamic Database: Automatically updates and stores data with every operation.
 
@@ -20,9 +20,9 @@ The app, named `product`, is included in the `INSTALLED_APPS` list in the main p
 
 2. **URL Routing:**
 Three main routes were created:
- - A route to display the full inventory.
- - A route to show a product entry form.
- - A route for product search and modification.
+    + A route to display the full inventory.
+    + A route to show a product entry form.
+    + A route for product search and modification.
 
 <div align="center"><img src="https://github.com/user-attachments/assets/ab485997-2b0b-44eb-9d5c-acf43a216cd8"  /> </div>
 
@@ -40,7 +40,7 @@ Each feature has a dedicated view to handle database interactions and render HTM
 5. **Base Template for Reusability:**
 A `base.html` template was created for consistent styling across the application, extended in all other templates.
 
-## 📷 Screen Shots
+## 📷 Screenshots
 <div align="center">
   <h4>View All Porducts</h4>
   <img src="https://github.com/user-attachments/assets/67b2a9a4-a870-4518-8861-097405efd2e0"  />
